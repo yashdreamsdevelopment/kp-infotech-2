@@ -1,0 +1,11 @@
+.disabled {
+  cursor: not-allowed;
+  /* display: none; */
+}
+
+.counter {
+  border: 1px solid #c1c1c1;
+  border-radius: 10px;
+  padding: 10px;
+  width: 276px;
+}

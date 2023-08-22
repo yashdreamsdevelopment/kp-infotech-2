@@ -1,0 +1,15 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+div {
+  padding: 20px;
+  border: 10px solid black;
+  margin: 30px;
+}
+
+span {
+  margin: 50px 30px;
+}

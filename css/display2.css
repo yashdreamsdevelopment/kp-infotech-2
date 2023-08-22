@@ -1,0 +1,81 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+/********** UTILITY ***********/
+.container {
+  max-width: 1280px;
+  /* border: 2px solid red; */
+  margin: auto;
+}
+
+/********** HEADER ***********/
+header {
+  /* border: 2px solid red; */
+  background: #0d0d0d;
+  color: white;
+  padding: 10px 0;
+  box-shadow: 0px 6px 13px 1px #787575ab;
+}
+
+#navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+#logo .logo-title {
+  font-weight: bold;
+}
+
+#logo .logo-title-invert {
+  color: orangered;
+}
+
+#navmenu {
+  /* border: 2px solid red; */
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+#navmenu .menu-item {
+  /* border: 2px solid red; */
+  list-style: none;
+}
+
+#navmenu .menu-item .menu-item-link {
+  /* border: 2px solid green; */
+  text-decoration: none;
+  color: white;
+  display: inline-block;
+  padding: 7px 12px;
+  transition: 0.2s ease-in;
+}
+
+#navmenu .menu-item .menu-item-link:hover {
+  color: orangered;
+}
+
+#navmenu .menu-item .menu-item-link.button {
+  border: 1px solid black;
+  padding: 10px 15px;
+  border-radius: 5px;
+  background: linear-gradient(to right, #f85032, #e73827);
+  color: whitesmoke;
+  transition: 0.2s ease-in;
+}
+
+#navmenu .menu-item .menu-item-link.button:hover {
+  background: linear-gradient(-45deg, #f85032, #e73827);
+  scale: 1.01;
+}

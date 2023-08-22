@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enquiry</title>
+</head>
+
+<body>
+    <h1>Enquiry Section</h1>
+    <p>We are always ready to serve you!</p>
+
+    <form action="" method="get">
+        <div>
+            <label for="name">Name</label>
+            <input type="text" name="name" id="name" placeholder="enter your name" required>
+        </div>
+        <div>
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email" placeholder="enter your email" required>
+        </div>
+        <div>
+            <label for="mobile">Mobile No.</label>
+            <input type="tel" name="mobile" id="mobile" placeholder="enter your mobile no" required>
+        </div>
+        <div>
+            <label for="feedback">Feedback</label>
+            <textarea name="feedback" id="feedback" cols="30" rows="10" placeholder="provide your valuable feedback"
+                required></textarea>
+        </div>
+
+        <div>
+            <label for="gender">Gender</label>
+
+            <input type="radio" id="male" name="gender" value="male">
+            <label for="male">Male</label>
+
+            <input type="radio" name="gender" id="female" value="female">
+            <label for="female">Female</label>
+        </div>
+
+        <div>
+            <label for="address">Address</label>
+            <textarea name="address" id="address" cols="30" rows="10" placeholder="enter your address"
+                required></textarea>
+        </div>
+        <div>
+            <label for="password">Password</label>
+            <input type="password" name="password" id="password" placeholder="enter your password" required></input>
+        </div>
+
+        <div>
+            <label for="cars">Cars</label>
+
+            <label for="mustang">Mustang</label>
+            <input type="checkbox">
+            <label for="gt650">GT 650</label>
+            <input type="checkbox">
+        </div>
+
+        <div>
+            <label for="range">meter</label>
+            <input type="range" id="range" name="range" max="100">
+        </div>
+
+        <div>
+            <button type="submit">Submit</button>
+            <button type="reset">Reset</button>
+        </div>
+    </form>
+</body>
+
+</html>

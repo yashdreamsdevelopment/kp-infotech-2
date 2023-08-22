@@ -1,0 +1,33 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --width-3: calc(100vw / 3);
+}
+
+body {
+  min-height: 100vh;
+  font-size: 0;
+}
+
+.card:nth-child(1) {
+  background-color: red;
+}
+
+.card:nth-child(2) {
+  background-color: yellow;
+}
+
+.card:nth-child(3) {
+  background-color: blue;
+}
+
+.card {
+  width: var(--width-3);
+  height: 100vh;
+  display: inline-block;
+  font-size: 0;
+}

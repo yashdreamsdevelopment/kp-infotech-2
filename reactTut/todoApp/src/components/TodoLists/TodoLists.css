@@ -1,0 +1,29 @@
+.todo-container {
+  /* border: 1px solid red; */
+  padding: 10px;
+  max-height: calc(100vh - 350px);
+  /* min-height: calc(100vh - 350px); */
+  overflow-y: auto;
+}
+
+.todo-container::-webkit-scrollbar {
+  background-color: #323232;
+  border-radius: 10px;
+  overflow: hidden;
+  width: 10px;
+}
+
+.todo-container::-webkit-scrollbar-button {
+  /* background: #000; */
+  display: none;
+}
+
+.todo-container::-webkit-scrollbar-thumb {
+  background: #020202a5;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.todo-container::-webkit-scrollbar-thumb:hover {
+  background: #020202;
+}

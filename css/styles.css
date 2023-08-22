@@ -1,0 +1,19 @@
+#first {
+  background-color: red;
+  color: yellow;
+}
+
+#second {
+  background-color: yellow;
+  color: red;
+}
+
+#third {
+  background-color: purple;
+  color: gold;
+}
+
+.container {
+  width: 100px;
+  height: 100px;
+}
