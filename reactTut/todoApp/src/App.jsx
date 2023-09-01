@@ -1,14 +1,14 @@
-import { useReducer, useState } from "react";
+import { useReducer, useState, useEffect } from "react";
 import "./App.css";
 import Button from "./components/Button/Button";
 import Input from "./components/Input/Input";
 import TodoLists from "./components/TodoLists/TodoLists";
-import {
-  onChangeHandler,
-  handleEditTodoViaDispatch,
-  handleDeleteTodoViaDispatch,
-  handleAddTodoViaDispatch,
-} from "./app.backend";
+// import {
+//   onChangeHandler,
+//   handleEditTodoViaDispatch,
+//   handleDeleteTodoViaDispatch,
+//   handleAddTodoViaDispatch,
+// } from "./app.backend";
 import todoReducer from "./reducers/todoReducer";
 
 function App() {
@@ -20,6 +20,61 @@ function App() {
   const [todoToEdit, setTodoToEdit] = useState(null);
 
   const [todosState, dispatch] = useReducer(todoReducer, []);
+
+  const onChangeHandler = (e) => {
+    const value = e.target.value;
+    setText(value);
+  };
+
+  const handleAddTodoViaDispatch = () => {
+    const todo = {
+      title: text,
+      id: todoToEdit?.id || Date.now(),
+    };
+
+    if (!todoToEdit) {
+      dispatch({ type: ADD_TODO, payload: todo });
+    } else {
+      dispatch({ type: EDIT_TODO, payload: todo });
+    }
+
+    if (setIsEditing) setIsEditing(!setIsEditing);
+    setText("");
+    setTodoToEdit(null);
+  };
+
+  const handleDeleteTodoViaDispatch = (id) => {
+    dispatch({ type: DELETE_TODO, payload: id });
+
+    if (text) setText("");
+  };
+
+  const handleEditTodoViaDispatch = (id) => {
+    setIsEditing(!isEditing);
+    const todo = todosState.find((todo) => todo.id === id);
+
+    setTodoToEdit(todo);
+    setText(todo.title);
+  };
+
+  const fetchTodo = async () => {
+    const response = await fetch(
+      "https://jsonplaceholder.typicode.com/todos/1"
+    );
+
+    const { ok, status } = response;
+
+    if (ok === true && status === 200) {
+      const data = await response.json();
+      console.log(data);
+    } else {
+      console.log("error");
+    }
+  };
+
+  useEffect(() => {
+    fetchTodo();
+  }, []);
 
   return (
     <>

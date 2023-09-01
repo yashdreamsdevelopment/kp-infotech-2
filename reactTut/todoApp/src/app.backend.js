@@ -1,4 +1,3 @@
-import todoReducer from "./reducers/todoReducer";
 import {
   ADD_TODO,
   DELETE_TODO,
